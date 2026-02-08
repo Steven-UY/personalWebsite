@@ -1,0 +1,4 @@
+- [x] Format the Danaher Droid image
+- [x] Add experience
+- [ ] Add blog section
+- [ ] Add photo section
