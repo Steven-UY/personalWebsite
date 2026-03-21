@@ -283,12 +283,15 @@ export default function Personal() {
                 <div className='mt-4 text-sm text-gray-700'>
                   <p>
                      Who knew that a story about a cattle drive from south Texas to Montana could be so amazing?
-                     The strongest part about Lonesome Dove are its characters, each feels to well-developed, unique and memorable.
-                     Each character has their part to play and they all feel so 'real' in that their flaws feel so realistic and their behaviors to.
-                     Especially the women in this book who in my opinion are written just oh so well.
+                     Please just read this book you need to it is a must. The characters are all so perfect I have never
+                     read or seen anything that has such well-developed and great characters. They all feel so true, consistent and
+                     unique. 
                   </p>
                   <p>
-                    Honestly a must read and an all timer.
+                    McMurtry's writing is also so clear, conversational and beautiful. He really nails the relationships between characters perfectly.
+                  </p>
+                  <p>
+                    Just read it okay it's such a great journey :)
                   </p>
                 </div>
               </div>
