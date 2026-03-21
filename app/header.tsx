@@ -1,5 +1,6 @@
 'use client'
 import { TextEffect } from '@/components/ui/text-effect'
+import { TextScramble } from '@/components/motion-primitives/text-scramble';
 import Link from 'next/link'
 
 export function Header() {
@@ -7,7 +8,9 @@ export function Header() {
     <header className="mb-8 flex items-center justify-between">
       <div>
         <Link href="/" className="font-medium text-black dark:text-white">
-          Steven Uy
+          <TextScramble>
+            Steven Uy
+          </TextScramble>
         </Link>
         <TextEffect
           as="p"
