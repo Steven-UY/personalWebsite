@@ -13,6 +13,9 @@ import {
   MorphingDialogContainer,
   MorphingDialogImage
 } from '@/components/ui/morphing-dialog'
+import { ScrollArea } from '@/components/website/scroll-area';
+
+
 
 import Link from 'next/link'
 import { AnimatedBackground } from '@/components/ui/animated-background'
@@ -220,7 +223,7 @@ export default function Personal() {
           got into reading recently, here are some that I've enjoyed
           </p>
       </motion.section>
-      
+
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
