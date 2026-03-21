@@ -13,7 +13,7 @@ import {
   MorphingDialogContainer,
   MorphingDialogImage
 } from '@/components/ui/morphing-dialog'
-import { ScrollArea } from '@/components/website/scroll-area';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 
 
@@ -216,6 +216,7 @@ export default function Personal() {
           ))}
         </div>
       </motion.section>
+
       
       <motion.section>
         <h3 className="mb-5 text-lg font-medium">books i like</h3>
@@ -223,6 +224,80 @@ export default function Personal() {
           got into reading recently, here are some that I've enjoyed
           </p>
       </motion.section>
+
+      <MorphingDialog
+      transition={{
+        type: 'spring',
+        stiffness: 200,
+        damping: 24,
+      }}
+    >
+      <MorphingDialogTrigger
+        style={{
+          borderRadius: '4px',
+        }}
+        className='border border-gray-200/60 bg-white'
+      >
+        <div className='flex items-center space-x-3 p-3'>
+          <MorphingDialogImage
+            src='/assets/lonesomeDove.jpg'
+            alt='lonesome dove'
+            className='h-8 w-8 object-cover object-top'
+            style={{
+              borderRadius: '4px',
+            }}
+          />
+          <div className='flex flex-col items-start justify-center space-y-0'>
+            <MorphingDialogTitle className='text-[10px] font-medium text-black sm:text-xs'>
+              Lonesome Dove
+            </MorphingDialogTitle>
+            <MorphingDialogSubtitle className='text-[10px] text-gray-600 sm:text-xs'>
+              Larry McMurtry
+            </MorphingDialogSubtitle>
+          </div>
+        </div>
+      </MorphingDialogTrigger>
+      <MorphingDialogContainer>
+        <MorphingDialogContent
+          style={{
+            borderRadius: '12px',
+          }}
+          className='relative h-auto w-[500px] border border-gray-100 bg-white'
+        >
+          <ScrollArea className='h-[90vh]' type='scroll'>
+            <div className='relative p-6'>
+              <div className='flex justify-center py-10'>
+                <MorphingDialogImage
+                  src='/assets/lonesomeDove.jpg'
+                  alt='What I Talk About When I Talk About Running - book cover'
+                  className='h-auto w-[200px]'
+                />
+              </div>
+              <div className=''>
+                <MorphingDialogTitle className='text-black'>
+                  Lonesome Dove
+                </MorphingDialogTitle>
+                <MorphingDialogSubtitle className='font-light text-gray-400'>
+                  Larry McMurtry
+                </MorphingDialogSubtitle>
+                <div className='mt-4 text-sm text-gray-700'>
+                  <p>
+                     Who knew that a story about a cattle drive from south Texas to Montana could be so amazing?
+                     The strongest part about Lonesome Dove are its characters, each feels to well-developed, unique and memorable.
+                     Each character has their part to play and they all feel so 'real' in that their flaws feel so realistic and their behaviors to.
+                     Especially the women in this book who in my opinion are written just oh so well.
+                  </p>
+                  <p>
+                    Honestly a must read and an all timer.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </ScrollArea>
+          <MorphingDialogClose className='text-zinc-500' />
+        </MorphingDialogContent>
+      </MorphingDialogContainer>
+    </MorphingDialog>
 
       <motion.section
         variants={VARIANTS_SECTION}
