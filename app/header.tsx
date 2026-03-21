@@ -2,23 +2,13 @@
 import { TextEffect } from '@/components/ui/text-effect'
 import { TextScramble } from '@/components/motion-primitives/text-scramble';
 import Link from 'next/link'
-import { useState } from 'react';
 
 export function Header() {
-  const [isTrigger, setIsTrigger] = useState(false);
-  
   return (
     <header className="mb-8 flex items-center justify-between">
       <div>
         <Link href="/" className="font-medium text-black dark:text-white">
-          <TextScramble
-            className = 'text-sm'
-            as='span'
-            speed={0.01}
-            trigger={isTrigger}
-            onHoverStart={() => setIsTrigger(true)}
-            onScrambleComplete={() => setIsTrigger(false)}
-          >
+          <TextScramble>
             Steven Uy
           </TextScramble>
         </Link>
