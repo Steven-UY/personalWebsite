@@ -217,15 +217,90 @@ export default function Personal() {
         </div>
       </motion.section>
 
-      
-      <motion.section>
-        <h3 className="mb-5 text-lg font-medium">books i like</h3>
-          <p className="mb-5 text-zinc-600 dark:text-zinc-400">
+      <motion.section className="space-y-3">
+        <h3 className="text-lg font-medium">books i like</h3>
+        <p className="text-zinc-600 dark:text-zinc-400">
           got into reading recently, here are some that I've enjoyed
-          </p>
-      </motion.section>
+        </p>
 
-      <MorphingDialog
+        <MorphingDialog
+          transition={{
+            type: 'spring',
+            stiffness: 200,
+            damping: 24,
+          }}
+        >
+          <MorphingDialogTrigger
+            style={{
+              borderRadius: '4px',
+            }}
+            className='border border-gray-200/60 bg-white'
+          >
+            <div className='flex items-center space-x-3 p-3'>
+              <MorphingDialogImage
+                src='/assets/lonesomeDove.jpg'
+                alt='lonesome dove'
+                className='h-8 w-8 object-cover object-top'
+                style={{
+                  borderRadius: '4px',
+                }}
+              />
+              <div className='flex flex-col items-start justify-center space-y-0'>
+                <MorphingDialogTitle className='text-[10px] font-medium text-black sm:text-xs'>
+                  Lonesome Dove
+                </MorphingDialogTitle>
+                <MorphingDialogSubtitle className='text-[10px] text-gray-600 sm:text-xs'>
+                  Larry McMurtry
+                </MorphingDialogSubtitle>
+              </div>
+            </div>
+          </MorphingDialogTrigger>
+          <MorphingDialogContainer>
+            <MorphingDialogContent
+              style={{
+                borderRadius: '12px',
+              }}
+              className='relative h-auto w-[500px] border border-gray-100 bg-white'
+            >
+              <ScrollArea className='h-[90vh]' type='scroll'>
+                <div className='relative p-6'>
+                  <div className='flex justify-center py-10'>
+                    <MorphingDialogImage
+                      src='/assets/lonesomeDove.jpg'
+                      alt='What I Talk About When I Talk About Running - book cover'
+                      className='h-auto w-[200px]'
+                    />
+                  </div>
+                  <div className=''>
+                    <MorphingDialogTitle className='text-black'>
+                      Lonesome Dove
+                    </MorphingDialogTitle>
+                    <MorphingDialogSubtitle className='font-light text-gray-400'>
+                      Larry McMurtry
+                    </MorphingDialogSubtitle>
+                    <div className='mt-4 text-sm text-gray-700'>
+                      <p>
+                         Who knew that a story about a cattle drive from south Texas to Montana could be so amazing?
+                         Please just read this book you need to it is a must. The characters are all so perfect I have never
+                         read or seen anything that has such well-developed and great characters. They all feel so true, consistent and
+                         unique. 
+                      </p>
+                      <p>
+                        McMurtry's writing is also so clear, conversational and beautiful. He really nails the relationships between characters perfectly.
+                      </p>
+                      <p>
+                        Just read it okay it's such a great journey :)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </ScrollArea>
+              <MorphingDialogClose className='text-zinc-500' />
+            </MorphingDialogContent>
+          </MorphingDialogContainer>
+        </MorphingDialog>
+        
+        <MorphingDialog
       transition={{
         type: 'spring',
         stiffness: 200,
@@ -240,8 +315,8 @@ export default function Personal() {
       >
         <div className='flex items-center space-x-3 p-3'>
           <MorphingDialogImage
-            src='/assets/lonesomeDove.jpg'
-            alt='lonesome dove'
+            src='/assets/tinmg.webp'
+            alt='Things in Nature Merely Grow'
             className='h-8 w-8 object-cover object-top'
             style={{
               borderRadius: '4px',
@@ -249,15 +324,15 @@ export default function Personal() {
           />
           <div className='flex flex-col items-start justify-center space-y-0'>
             <MorphingDialogTitle className='text-[10px] font-medium text-black sm:text-xs'>
-              Lonesome Dove
+              Things in Nature Merely Grow
             </MorphingDialogTitle>
             <MorphingDialogSubtitle className='text-[10px] text-gray-600 sm:text-xs'>
-              Larry McMurtry
+              Yiyun Li
             </MorphingDialogSubtitle>
           </div>
         </div>
-      </MorphingDialogTrigger>
-      <MorphingDialogContainer>
+        </MorphingDialogTrigger>
+        <MorphingDialogContainer>
         <MorphingDialogContent
           style={{
             borderRadius: '12px',
@@ -268,39 +343,50 @@ export default function Personal() {
             <div className='relative p-6'>
               <div className='flex justify-center py-10'>
                 <MorphingDialogImage
-                  src='/assets/lonesomeDove.jpg'
+                  src='/assets/tinmg.webp'
                   alt='What I Talk About When I Talk About Running - book cover'
                   className='h-auto w-[200px]'
                 />
               </div>
               <div className=''>
                 <MorphingDialogTitle className='text-black'>
-                  Lonesome Dove
+                  Things in Nature Merely Grow
                 </MorphingDialogTitle>
                 <MorphingDialogSubtitle className='font-light text-gray-400'>
-                  Larry McMurtry
+                  Yiyun Li
                 </MorphingDialogSubtitle>
                 <div className='mt-4 text-sm text-gray-700'>
                   <p>
-                     Who knew that a story about a cattle drive from south Texas to Montana could be so amazing?
-                     Please just read this book you need to it is a must. The characters are all so perfect I have never
-                     read or seen anything that has such well-developed and great characters. They all feel so true, consistent and
-                     unique. 
+                    "There is no good way to say this..." that's also how I feel about this book. 
                   </p>
                   <p>
-                    McMurtry's writing is also so clear, conversational and beautiful. He really nails the relationships between characters perfectly.
+                    It is a memoir/reflection about the grief the "abyss" that Yiyun Li has to live with after
+                    the suicide of both of her sons. She writes about it so honestly and beautifully. Yes it is
+                    depressing, but there is something refreshing about someone just acknowledging when a situation
+                    just straight up sucks, and not forcing there to be a silver lining.
                   </p>
                   <p>
-                    Just read it okay it's such a great journey :)
+                    I do think though that it is unfortunate that depression isn't explicitly mentioned. It's a shame honestly
+                    and I also don't agree with her values completely but that's okay.
+                  </p>
+                  <p>
+                    I don't have to agree with her for me to love the book. It's one of my favorites since it helped me feel that pain,
+                    that kind of helplessness that depression makes someone feel. When the sufferring in life outweighs the reason to live then what?
+                    It is a mentality unlike the one that I have but it helped me feel that sadness and in turn better empathize with people who are in that
+                    frame of mind. Well at least I tried.
                   </p>
                 </div>
               </div>
             </div>
-          </ScrollArea>
+           </ScrollArea>
           <MorphingDialogClose className='text-zinc-500' />
-        </MorphingDialogContent>
-      </MorphingDialogContainer>
-    </MorphingDialog>
+         </MorphingDialogContent>
+        </MorphingDialogContainer>
+       </MorphingDialog>
+      
+      </motion.section>
+
+      
 
       <motion.section
         variants={VARIANTS_SECTION}
