@@ -7,10 +7,13 @@ import {
   MorphingDialog,
   MorphingDialogTrigger,
   MorphingDialogContent,
+  MorphingDialogTitle,
+  MorphingDialogSubtitle,
   MorphingDialogClose,
   MorphingDialogContainer,
   MorphingDialogImage
 } from '@/components/ui/morphing-dialog'
+
 import Link from 'next/link'
 import { AnimatedBackground } from '@/components/ui/animated-background'
 import {
@@ -20,7 +23,6 @@ import {
   SOCIAL_LINKS,
 } from './data'
 import { TextScramble } from '@/components/motion-primitives/text-scramble';
-
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
   visible: {
@@ -135,7 +137,7 @@ export default function Personal() {
       >
         <div className="flex-1 pr-4 pb-4">
           <p className="text-zinc-600 dark:text-zinc-400">
-            computer science student at fordham university with experience as a software and data engineer intern.
+            computer science student at fordham university with experience as a software and data engineer intern. 
           </p>
         </div>
         <div className="flex-1 space-y-4 pt-4">
@@ -144,7 +146,7 @@ export default function Personal() {
             </p>
         </div>
       </motion.section>
-      
+
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
@@ -211,8 +213,15 @@ export default function Personal() {
           ))}
         </div>
       </motion.section>
-
-            <motion.section
+      
+      <motion.section>
+        <h3 className="mb-5 text-lg font-medium">books i like</h3>
+          <p className="mb-5 text-zinc-600 dark:text-zinc-400">
+          got into reading recently, here are some that I've enjoyed
+          </p>
+      </motion.section>
+      
+      <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
