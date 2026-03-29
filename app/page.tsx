@@ -15,7 +15,7 @@ import {
 } from '@/components/ui/morphing-dialog'
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { TextShimmerWave } from '@/components/motion-primitives/text-shimmer-wave';
-
+import { Tilt } from '@/components/motion-primitives/tilt';
 import Link from 'next/link'
 import { AnimatedBackground } from '@/components/ui/animated-background'
 import {
@@ -218,7 +218,7 @@ export default function Personal() {
       </motion.section>
 
       <motion.section className="space-y-3">
-        <h3 className="text-lg font-medium">books i like</h3>
+        <h3 className="text-lg font-medium">media i like</h3>
         <p className="text-zinc-600 dark:text-zinc-400">
           got into reading recently, here are some that I've enjoyed
         </p>
@@ -384,6 +384,32 @@ export default function Personal() {
         </MorphingDialogContainer>
        </MorphingDialog>
       
+      <p className="text-zinc-600 dark:text-zinc-400">
+          here are some movies that i enjoy
+      </p>
+
+      <Tilt rotationFactor={8} isRevese>
+      <div
+        style={{
+          borderRadius: '12px',
+        }}
+        className='flex max-w-[270px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900'
+      >
+        <img
+          src='https://images.beta.cosmos.so/f7fcb95d-981b-4cb3-897f-e35f6c20e830?format=jpeg'
+          alt='Ghost in the shell - Kôkaku kidôtai'
+          className='h-48 w-full object-cover'
+        />
+        <div className='p-2'>
+          <h1 className='font-mono leading-snug text-zinc-950 dark:text-zinc-50'>
+            Ghost in the Shell
+          </h1>
+          <p className='text-zinc-700 dark:text-zinc-400'>Kôkaku kidôtai</p>
+        </div>
+      </div>
+    </Tilt>
+
+
       </motion.section>
 
       <motion.section
