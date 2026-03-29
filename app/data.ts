@@ -14,6 +14,13 @@ type WorkExperience = {
   id: string
 }
 
+type BlogPost = {
+  title: string
+  description: string
+  link: string
+  uid: string
+}
+
 type SocialLink = {
   label: string
   link: string
@@ -36,6 +43,15 @@ export const PROJECTS: Project[] = [
     photo:
       '/assets/danaherDroid.png',
     id: 'project2',
+  },
+]
+
+export const BLOG_POSTS: BlogPost[] = [
+  {
+    title: 'Hello World!',
+    description: 'More about me who am I? More personal stuff I guess...',
+    link: '/blog/helloWorld',
+    uid: 'blog-1',
   },
 ]
 
@@ -75,3 +91,4 @@ export const SOCIAL_LINKS: SocialLink[] = [
 ]
 
 export const EMAIL = 'suy4@fordham.edu'
+
