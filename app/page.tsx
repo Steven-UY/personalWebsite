@@ -234,7 +234,7 @@ export default function Personal() {
             style={{
               borderRadius: '4px',
             }}
-            className='border border-gray-200/60 bg-white'
+            className='border border-zinc-700/70 bg-zinc-950'
           >
             <div className='flex items-center space-x-3 p-3'>
               <MorphingDialogImage
@@ -246,10 +246,10 @@ export default function Personal() {
                 }}
               />
               <div className='flex flex-col items-start justify-center space-y-0'>
-                <MorphingDialogTitle className='text-[10px] font-medium text-black sm:text-xs'>
+                <MorphingDialogTitle className='text-[10px] font-medium text-white sm:text-xs'>
                   Lonesome Dove
                 </MorphingDialogTitle>
-                <MorphingDialogSubtitle className='text-[10px] text-gray-600 sm:text-xs'>
+                <MorphingDialogSubtitle className='text-[10px] text-zinc-300 sm:text-xs'>
                   Larry McMurtry
                 </MorphingDialogSubtitle>
               </div>
@@ -260,7 +260,7 @@ export default function Personal() {
               style={{
                 borderRadius: '12px',
               }}
-              className='relative h-auto w-[500px] border border-gray-100 bg-white'
+              className='relative h-auto w-[500px] border border-zinc-800 bg-zinc-950'
             >
               <ScrollArea className='h-[90vh]' type='scroll'>
                 <div className='relative p-6'>
@@ -272,13 +272,13 @@ export default function Personal() {
                     />
                   </div>
                   <div className=''>
-                    <MorphingDialogTitle className='text-black'>
+                    <MorphingDialogTitle className='text-white'>
                       Lonesome Dove
                     </MorphingDialogTitle>
-                    <MorphingDialogSubtitle className='font-light text-gray-400'>
+                    <MorphingDialogSubtitle className='font-light text-zinc-300'>
                       Larry McMurtry
                     </MorphingDialogSubtitle>
-                    <div className='mt-4 text-sm text-gray-700'>
+                    <div className='mt-4 text-sm text-zinc-200'>
                       <p>
                          Who knew that a story about a cattle drive from south Texas to Montana could be so amazing?
                          Please just read this book you need to it is a must. The characters are all so perfect I have never
@@ -295,7 +295,7 @@ export default function Personal() {
                   </div>
                 </div>
               </ScrollArea>
-              <MorphingDialogClose className='text-zinc-500' />
+              <MorphingDialogClose className='text-zinc-300 hover:text-white' />
             </MorphingDialogContent>
           </MorphingDialogContainer>
         </MorphingDialog>
@@ -311,7 +311,7 @@ export default function Personal() {
         style={{
           borderRadius: '4px',
         }}
-        className='border border-gray-200/60 bg-white'
+        className='border border-zinc-700/70 bg-zinc-950'
       >
         <div className='flex items-center space-x-3 p-3'>
           <MorphingDialogImage
@@ -323,10 +323,10 @@ export default function Personal() {
             }}
           />
           <div className='flex flex-col items-start justify-center space-y-0'>
-            <MorphingDialogTitle className='text-[10px] font-medium text-black sm:text-xs'>
+            <MorphingDialogTitle className='text-[10px] font-medium text-white sm:text-xs'>
               Things in Nature Merely Grow
             </MorphingDialogTitle>
-            <MorphingDialogSubtitle className='text-[10px] text-gray-600 sm:text-xs'>
+            <MorphingDialogSubtitle className='text-[10px] text-zinc-300 sm:text-xs'>
               Yiyun Li
             </MorphingDialogSubtitle>
           </div>
@@ -337,7 +337,7 @@ export default function Personal() {
           style={{
             borderRadius: '12px',
           }}
-          className='relative h-auto w-[500px] border border-gray-100 bg-white'
+          className='relative h-auto w-[500px] border border-zinc-800 bg-zinc-950'
         >
           <ScrollArea className='h-[90vh]' type='scroll'>
             <div className='relative p-6'>
@@ -349,13 +349,13 @@ export default function Personal() {
                 />
               </div>
               <div className=''>
-                <MorphingDialogTitle className='text-black'>
+                <MorphingDialogTitle className='text-white'>
                   Things in Nature Merely Grow
                 </MorphingDialogTitle>
-                <MorphingDialogSubtitle className='font-light text-gray-400'>
+                <MorphingDialogSubtitle className='font-light text-zinc-300'>
                   Yiyun Li
                 </MorphingDialogSubtitle>
-                <div className='mt-4 text-sm text-gray-700'>
+                <div className='mt-4 text-sm text-zinc-200'>
                   <p>
                     "There is no good way to say this..." that's also how I feel about this book. 
                   </p>
@@ -379,7 +379,7 @@ export default function Personal() {
               </div>
             </div>
            </ScrollArea>
-          <MorphingDialogClose className='text-zinc-500' />
+          <MorphingDialogClose className='text-zinc-300 hover:text-white' />
          </MorphingDialogContent>
         </MorphingDialogContainer>
        </MorphingDialog>
