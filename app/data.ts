@@ -57,15 +57,20 @@ export const BLOG_POSTS: BlogPost[] = [
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
+    company: 'Tennis Nomad',
+    title: 'Software Developer Intern',
+    start: 'May 2025',
+    end: 'July 2025',
+    id: 'work3',
+  },
+  {
     company: 'Novare',
     title: 'Data Engineer Intern',
     start: 'July 2024',
     end: 'August 2024',
     id: 'work1',
   },
-  
-{
-
+  {
     company: 'Emerald Energy',
     title: 'Software Engineer Intern',
     start: 'May 2024',

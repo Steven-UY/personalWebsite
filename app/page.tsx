@@ -1,6 +1,5 @@
 'use client'
 import { motion } from 'motion/react'
-import { XIcon } from 'lucide-react'
 import { Spotlight } from '@/components/ui/spotlight'
 import { Magnetic } from '@/components/ui/magnetic'
 import {
@@ -15,7 +14,6 @@ import {
 } from '@/components/ui/morphing-dialog'
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { TextShimmerWave } from '@/components/motion-primitives/text-shimmer-wave';
-import { Tilt } from '@/components/motion-primitives/tilt';
 import Link from 'next/link'
 import { AnimatedBackground } from '@/components/ui/animated-background'
 import {
@@ -25,7 +23,6 @@ import {
   SOCIAL_LINKS,
   BLOG_POSTS,
 } from './data'
-import { TextScramble } from '@/components/motion-primitives/text-scramble';
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
   visible: {
@@ -46,51 +43,6 @@ const TRANSITION_SECTION = {
   duration: 0.3,
 }
 
-type ProjectPhotoProps = {
-  src: string
-}
-
-
-function ProjectPhoto({ src }: ProjectPhotoProps) {
-  return (
-    <MorphingDialog
-      transition={{
-        duration: 0.3,
-        ease: 'easeInOut',
-      }}
-    >
-      <MorphingDialogTrigger>
-        <MorphingDialogImage
-          src={src}
-          alt='Project thumbnail'
-          className='aspect-video w-full rounded-[4px] object-cover'
-        />
-      </MorphingDialogTrigger>
-      <MorphingDialogContainer>
-        <MorphingDialogContent className='relative'>
-          <MorphingDialogImage
-            src={src}
-            alt='Sony Style Store in the Sony Center complex - Berlin, Germany (2000)'
-            className='h-auto w-full max-w-[90vw] rounded-[4px] object-cover lg:h-[90vh]'
-          />
-        </MorphingDialogContent>
-        <MorphingDialogClose
-          className='fixed right-6 top-6 h-fit w-fit rounded-full bg-white p-1'
-          variants={{
-            initial: { opacity: 0 },
-            animate: {
-              opacity: 1,
-              transition: { delay: 0.3, duration: 0.1 },
-            },
-            exit: { opacity: 0, transition: { duration: 0 } },
-          }}
-        >
-          <XIcon className='h-5 w-5 text-zinc-500' />
-        </MorphingDialogClose>
-      </MorphingDialogContainer>
-    </MorphingDialog>
-  );
-}
 
 function MagneticSocialLink({
   children,
@@ -129,7 +81,7 @@ function MagneticSocialLink({
 export default function Personal() {
   return (
     <motion.main
-      className="space-y-24"
+      className="space-y-16"
       variants={VARIANTS_CONTAINER}
       initial="hidden"
       animate="visible"
@@ -147,35 +99,6 @@ export default function Personal() {
             <TextShimmerWave className='font-mono text-sm' duration={1}>
               currently creating and exploring the world...
             </TextShimmerWave>
-        </div>
-      </motion.section>
-
-      <motion.section
-        variants={VARIANTS_SECTION}
-        transition={TRANSITION_SECTION}
-      >
-        <h3 className="mb-5 text-lg font-medium">projects</h3>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {PROJECTS.map((project) => (
-            <div key={project.name} className="space-y-2">
-              <div className="relative rounded-xl bg-zinc-50/40 p-0 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                <ProjectPhoto src={project.photo} />
-              </div>
-              <div className="px-1">
-                <a
-                  className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
-                  href={project.link}
-                  target="_blank"
-                >
-                  {project.name}
-                  <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 dark:bg-zinc-50 transition-all duration-200 group-hover:max-w-full"></span>
-                </a>
-                <p className="text-base text-zinc-600 dark:text-zinc-400">
-                  {project.description}
-                </p>
-              </div>
-            </div>
-          ))}
         </div>
       </motion.section>
 
@@ -217,10 +140,70 @@ export default function Personal() {
         </div>
       </motion.section>
 
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <h3 className="mb-5 text-lg font-medium">projects</h3>
+        <div className="flex flex-col space-y-2">
+          {PROJECTS.map((project) => (
+            <div key={project.name} className="px-1">
+              <a
+                className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
+                href={project.link}
+                target="_blank"
+              >
+                {project.name}
+                <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 dark:bg-zinc-50 transition-all duration-200 group-hover:max-w-full"></span>
+              </a>
+              <p className="text-base text-zinc-600 dark:text-zinc-400">
+                {project.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </motion.section>
+
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <h3 className="mb-5 text-lg font-medium">some thoughts</h3>
+        <div className="flex flex-col space-y-0">
+          <AnimatedBackground
+            enableHover
+            className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
+            transition={{
+              type: 'spring',
+              bounce: 0,
+              duration: 0.2,
+            }}
+          >
+            {BLOG_POSTS.map((post) => (
+              <Link
+                key={post.uid}
+                className="-mx-3 rounded-xl px-3 py-3"
+                href={post.link}
+                data-id={post.uid}
+              >
+                <div className="flex flex-col space-y-1">
+                  <h4 className="font-normal dark:text-zinc-100">
+                    {post.title}
+                  </h4>
+                  <p className="text-zinc-500 dark:text-zinc-400">
+                    {post.description}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </AnimatedBackground>
+        </div>
+      </motion.section>
+
       <motion.section className="space-y-3">
-        <h3 className="text-lg font-medium">media i like</h3>
+        <h3 className="mb-5 text-lg font-medium">top three books</h3>
         <p className="text-zinc-600 dark:text-zinc-400">
-          got into reading recently, here are some that I've enjoyed
+          my favorite reads
         </p>
 
         <MorphingDialog
@@ -234,7 +217,7 @@ export default function Personal() {
             style={{
               borderRadius: '4px',
             }}
-            className='border border-zinc-700/70 bg-zinc-950'
+            className='border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900'
           >
             <div className='flex items-center space-x-3 p-3'>
               <MorphingDialogImage
@@ -246,10 +229,10 @@ export default function Personal() {
                 }}
               />
               <div className='flex flex-col items-start justify-center space-y-0'>
-                <MorphingDialogTitle className='text-[10px] font-medium text-white sm:text-xs'>
+                <MorphingDialogTitle className='text-[10px] font-medium text-zinc-900 dark:text-zinc-100 sm:text-xs'>
                   Lonesome Dove
                 </MorphingDialogTitle>
-                <MorphingDialogSubtitle className='text-[10px] text-zinc-300 sm:text-xs'>
+                <MorphingDialogSubtitle className='text-[10px] text-zinc-500 dark:text-zinc-400 sm:text-xs'>
                   Larry McMurtry
                 </MorphingDialogSubtitle>
               </div>
@@ -283,7 +266,7 @@ export default function Personal() {
                          Who knew that a story about a cattle drive from south Texas to Montana could be so amazing?
                          Please just read this book you need to it is a must. The characters are all so perfect I have never
                          read or seen anything that has such well-developed and great characters. They all feel so true, consistent and
-                         unique. 
+                         unique.
                       </p>
                       <p>
                         McMurtry's writing is also so clear, conversational and beautiful. He really nails the relationships between characters perfectly.
@@ -299,7 +282,7 @@ export default function Personal() {
             </MorphingDialogContent>
           </MorphingDialogContainer>
         </MorphingDialog>
-        
+
         <MorphingDialog
       transition={{
         type: 'spring',
@@ -311,7 +294,7 @@ export default function Personal() {
         style={{
           borderRadius: '4px',
         }}
-        className='border border-zinc-700/70 bg-zinc-950'
+        className='border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900'
       >
         <div className='flex items-center space-x-3 p-3'>
           <MorphingDialogImage
@@ -323,10 +306,10 @@ export default function Personal() {
             }}
           />
           <div className='flex flex-col items-start justify-center space-y-0'>
-            <MorphingDialogTitle className='text-[10px] font-medium text-white sm:text-xs'>
+            <MorphingDialogTitle className='text-[10px] font-medium text-zinc-900 dark:text-zinc-100 sm:text-xs'>
               Things in Nature Merely Grow
             </MorphingDialogTitle>
-            <MorphingDialogSubtitle className='text-[10px] text-zinc-300 sm:text-xs'>
+            <MorphingDialogSubtitle className='text-[10px] text-zinc-500 dark:text-zinc-400 sm:text-xs'>
               Yiyun Li
             </MorphingDialogSubtitle>
           </div>
@@ -357,7 +340,7 @@ export default function Personal() {
                 </MorphingDialogSubtitle>
                 <div className='mt-4 text-sm text-zinc-200'>
                   <p>
-                    "There is no good way to say this..." that's also how I feel about this book. 
+                    "There is no good way to say this..." that's also how I feel about this book.
                   </p>
                   <p>
                     It is a memoir/reflection about the grief the "abyss" that Yiyun Li has to live with after
@@ -383,31 +366,78 @@ export default function Personal() {
          </MorphingDialogContent>
         </MorphingDialogContainer>
        </MorphingDialog>
-      
-      <p className="text-zinc-600 dark:text-zinc-400">
-          here are some movies that i enjoy
-      </p>
 
-      <Tilt rotationFactor={8} isRevese>
-      <div
-        style={{
-          borderRadius: '12px',
-        }}
-        className='flex max-w-[270px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900'
-      >
-        <img
-          src='https://images.beta.cosmos.so/f7fcb95d-981b-4cb3-897f-e35f6c20e830?format=jpeg'
-          alt='Ghost in the shell - Kôkaku kidôtai'
-          className='h-48 w-full object-cover'
-        />
-        <div className='p-2'>
-          <h1 className='font-mono leading-snug text-zinc-950 dark:text-zinc-50'>
-            Ghost in the Shell
-          </h1>
-          <p className='text-zinc-700 dark:text-zinc-400'>Kôkaku kidôtai</p>
-        </div>
-      </div>
-    </Tilt>
+        <MorphingDialog
+          transition={{
+            type: 'spring',
+            stiffness: 200,
+            damping: 24,
+          }}
+        >
+          <MorphingDialogTrigger
+            style={{
+              borderRadius: '4px',
+            }}
+            className='border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900'
+          >
+            <div className='flex items-center space-x-3 p-3'>
+              <MorphingDialogImage
+                src='/assets/pachinko.jpg'
+                alt='Pachinko'
+                className='h-8 w-8 object-cover object-top'
+                style={{
+                  borderRadius: '4px',
+                }}
+              />
+              <div className='flex flex-col items-start justify-center space-y-0'>
+                <MorphingDialogTitle className='text-[10px] font-medium text-zinc-900 dark:text-zinc-100 sm:text-xs'>
+                  Pachinko
+                </MorphingDialogTitle>
+                <MorphingDialogSubtitle className='text-[10px] text-zinc-500 dark:text-zinc-400 sm:text-xs'>
+                  Min Jin Lee
+                </MorphingDialogSubtitle>
+              </div>
+            </div>
+          </MorphingDialogTrigger>
+          <MorphingDialogContainer>
+            <MorphingDialogContent
+              style={{
+                borderRadius: '12px',
+              }}
+              className='relative h-auto w-[500px] border border-zinc-800 bg-zinc-950'
+            >
+              <ScrollArea className='h-[90vh]' type='scroll'>
+                <div className='relative p-6'>
+                  <div className='flex justify-center py-10'>
+                    <MorphingDialogImage
+                      src='/assets/pachinko.jpg'
+                      alt='Pachinko - book cover'
+                      className='h-auto w-[200px]'
+                    />
+                  </div>
+                  <div className=''>
+                    <MorphingDialogTitle className='text-white'>
+                      Pachinko
+                    </MorphingDialogTitle>
+                    <MorphingDialogSubtitle className='font-light text-zinc-300'>
+                      Min Jin Lee
+                    </MorphingDialogSubtitle>
+                    <div className='mt-4 text-sm text-zinc-200'>
+                      <p>
+                        Beautifully and tragically written, the book is able to cover multiple generations of this Korean family that have immigrated to Japan.
+                        The struggle to fit into a new country is an experience that I relate to deeply. This book made me realize how privileged I am and also
+                        opened my eyes to the sufferrings that Zainichi Koreans went through trying to make ends meet and simply survive. Love this book it lives up
+                        to the hype in my opinion. The only flaw is not commiting to a single generation for long enough, the book is a little short for the amount of
+                        characters that we have.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </ScrollArea>
+              <MorphingDialogClose className='text-zinc-300 hover:text-white' />
+            </MorphingDialogContent>
+          </MorphingDialogContainer>
+        </MorphingDialog>
 
 
       </motion.section>
@@ -416,43 +446,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-3 text-lg font-medium">some thoughts</h3>
-        <div className="flex flex-col space-y-0">
-          <AnimatedBackground
-            enableHover
-            className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
-            transition={{
-              type: 'spring',
-              bounce: 0,
-              duration: 0.2,
-            }}
-          >
-            {BLOG_POSTS.map((post) => (
-              <Link
-                key={post.uid}
-                className="-mx-3 rounded-xl px-3 py-3"
-                href={post.link}
-                data-id={post.uid}
-              >
-                <div className="flex flex-col space-y-1">
-                  <h4 className="font-normal dark:text-zinc-100">
-                    {post.title}
-                  </h4>
-                  <p className="text-zinc-500 dark:text-zinc-400">
-                    {post.description}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </AnimatedBackground>
-        </div>
-      </motion.section> 
-
-      <motion.section
-        variants={VARIANTS_SECTION}
-        transition={TRANSITION_SECTION}
-      >
-        <h3 className="mb-5 text-lg font-medium">more of me</h3>
+        <h3 className="mb-5 text-lg font-medium">follow me</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
           feel free to contact me at{' '}
           <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
