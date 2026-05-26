@@ -97,7 +97,7 @@ export default function Personal() {
         </div>
         <div className="flex-1 space-y-4 pt-4">
             <TextShimmerWave className='font-mono text-sm' duration={1}>
-              currently creating and exploring the world...
+              i am happiest when i make things...
             </TextShimmerWave>
         </div>
       </motion.section>
@@ -343,19 +343,18 @@ export default function Personal() {
                     "There is no good way to say this..." that's also how I feel about this book.
                   </p>
                   <p>
-                    It is a memoir/reflection about the grief the "abyss" that Yiyun Li has to live with after
-                    the suicide of both of her sons. She writes about it so honestly and beautifully. Yes it is
+                    I mean it's literally about how the author lost both of her sons to suicide... Yes it's
                     depressing, but there is something refreshing about someone just acknowledging when a situation
                     just straight up sucks, and not forcing there to be a silver lining.
                   </p>
                   <p>
-                    I do think though that it is unfortunate that depression isn't explicitly mentioned. It's a shame honestly
-                    and I also don't agree with her values completely but that's okay.
+                    I do think though that it is unfortunate that depression isn't explicitly mentioned. It's honestly swept under the rug. Yes it very strongly
+                    implied but I just don't believe that the culture of indirection which is so present in asian culture is something that should be propogated. 
                   </p>
                   <p>
-                    I don't have to agree with her for me to love the book. It's one of my favorites since it helped me feel that pain,
-                    that kind of helplessness that depression makes someone feel. When the sufferring in life outweighs the reason to live then what?
-                    It is a mentality unlike the one that I have but it helped me feel that sadness and in turn better empathize with people who are in that
+                    I don't have to agree with her for me to love the book. This book helped me better understand what depression is like, how it can destroy someone so quietly and also weirdly normalized it for me...
+                    When the sufferring in life outweighs the reason to live then what why live what's the point of going on?
+                    It's a mentality unlike the one that I have but it helped me feel that sadness and in turn better empathize with people who are in that
                     frame of mind. Well at least I tried.
                   </p>
                 </div>
@@ -424,11 +423,11 @@ export default function Personal() {
                     </MorphingDialogSubtitle>
                     <div className='mt-4 text-sm text-zinc-200'>
                       <p>
-                        Beautifully and tragically written, the book is able to cover multiple generations of this Korean family that have immigrated to Japan.
-                        The struggle to fit into a new country is an experience that I relate to deeply. This book made me realize how privileged I am and also
-                        opened my eyes to the sufferrings that Zainichi Koreans went through trying to make ends meet and simply survive. Love this book it lives up
-                        to the hype in my opinion. The only flaw is not commiting to a single generation for long enough, the book is a little short for the amount of
-                        characters that we have.
+                        I'm a little biased since one of the characters in this book Noa I relate to very very much. This book spans four generations of a Korean family
+                        that immigrated to Japan (Zainichi Koreans they're called) and it details the resillience, the scrappiness and trauma endured by the family just to 
+                        get by. I love that the title 'pachinko' refers to how many Zainichi Koreans were, in some way or another, connected to a pachinko parlor and also refers
+                        to the terrible luck that the characters seem to have in the book. Also broadened my understanding on how Koreans were treated as second-rate citizens in Japan.
+                        It's weird how much things have changed today...
                       </p>
                     </div>
                   </div>
