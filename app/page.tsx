@@ -243,7 +243,7 @@ export default function Personal() {
               style={{
                 borderRadius: '12px',
               }}
-              className='relative h-auto w-[500px] border border-zinc-800 bg-zinc-950'
+              className='relative h-auto w-[500px] border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950'
             >
               <ScrollArea className='h-[90vh]' type='scroll'>
                 <div className='relative p-6'>
@@ -255,13 +255,13 @@ export default function Personal() {
                     />
                   </div>
                   <div className=''>
-                    <MorphingDialogTitle className='text-white'>
+                    <MorphingDialogTitle className='text-zinc-900 dark:text-white'>
                       Lonesome Dove
                     </MorphingDialogTitle>
-                    <MorphingDialogSubtitle className='font-light text-zinc-300'>
+                    <MorphingDialogSubtitle className='font-light text-zinc-600 dark:text-zinc-300'>
                       Larry McMurtry
                     </MorphingDialogSubtitle>
-                    <div className='mt-4 text-sm text-zinc-200'>
+                    <div className='mt-4 text-sm text-zinc-700 dark:text-zinc-200'>
                       <p>
                          Who knew that a story about a cattle drive from south Texas to Montana could be so amazing?
                          Please just read this book you need to it is a must. The characters are all so perfect I have never
@@ -278,7 +278,7 @@ export default function Personal() {
                   </div>
                 </div>
               </ScrollArea>
-              <MorphingDialogClose className='text-zinc-300 hover:text-white' />
+              <MorphingDialogClose className='text-zinc-500 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white' />
             </MorphingDialogContent>
           </MorphingDialogContainer>
         </MorphingDialog>
@@ -320,7 +320,7 @@ export default function Personal() {
           style={{
             borderRadius: '12px',
           }}
-          className='relative h-auto w-[500px] border border-zinc-800 bg-zinc-950'
+          className='relative h-auto w-[500px] border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950'
         >
           <ScrollArea className='h-[90vh]' type='scroll'>
             <div className='relative p-6'>
@@ -332,13 +332,13 @@ export default function Personal() {
                 />
               </div>
               <div className=''>
-                <MorphingDialogTitle className='text-white'>
+                <MorphingDialogTitle className='text-zinc-900 dark:text-white'>
                   Things in Nature Merely Grow
                 </MorphingDialogTitle>
-                <MorphingDialogSubtitle className='font-light text-zinc-300'>
+                <MorphingDialogSubtitle className='font-light text-zinc-600 dark:text-zinc-300'>
                   Yiyun Li
                 </MorphingDialogSubtitle>
-                <div className='mt-4 text-sm text-zinc-200'>
+                <div className='mt-4 text-sm text-zinc-700 dark:text-zinc-200'>
                   <p>
                     "There is no good way to say this..." that's also how I feel about this book.
                   </p>
@@ -361,7 +361,7 @@ export default function Personal() {
               </div>
             </div>
            </ScrollArea>
-          <MorphingDialogClose className='text-zinc-300 hover:text-white' />
+          <MorphingDialogClose className='text-zinc-500 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white' />
          </MorphingDialogContent>
         </MorphingDialogContainer>
        </MorphingDialog>
@@ -403,7 +403,7 @@ export default function Personal() {
               style={{
                 borderRadius: '12px',
               }}
-              className='relative h-auto w-[500px] border border-zinc-800 bg-zinc-950'
+              className='relative h-auto w-[500px] border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950'
             >
               <ScrollArea className='h-[90vh]' type='scroll'>
                 <div className='relative p-6'>
@@ -415,13 +415,13 @@ export default function Personal() {
                     />
                   </div>
                   <div className=''>
-                    <MorphingDialogTitle className='text-white'>
+                    <MorphingDialogTitle className='text-zinc-900 dark:text-white'>
                       Pachinko
                     </MorphingDialogTitle>
-                    <MorphingDialogSubtitle className='font-light text-zinc-300'>
+                    <MorphingDialogSubtitle className='font-light text-zinc-600 dark:text-zinc-300'>
                       Min Jin Lee
                     </MorphingDialogSubtitle>
-                    <div className='mt-4 text-sm text-zinc-200'>
+                    <div className='mt-4 text-sm text-zinc-700 dark:text-zinc-200'>
                       <p>
                         I'm a little biased since one of the characters in this book Noa I relate to very very much. This book spans four generations of a Korean family
                         that immigrated to Japan (Zainichi Koreans they're called) and it details the resillience, the scrappiness and trauma endured by the family just to 
@@ -433,7 +433,7 @@ export default function Personal() {
                   </div>
                 </div>
               </ScrollArea>
-              <MorphingDialogClose className='text-zinc-300 hover:text-white' />
+              <MorphingDialogClose className='text-zinc-500 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white' />
             </MorphingDialogContent>
           </MorphingDialogContainer>
         </MorphingDialog>
