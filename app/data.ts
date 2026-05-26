@@ -87,11 +87,11 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     label: 'Goodreads',
-    link: 'https://twitter.com/ibelick',
+    link: 'https://www.goodreads.com/user/show/194850098-steven-uy',
   },
   {
     label: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/ibelick',
+    link: 'https://www.linkedin.com/in/steven-c-uy/',
   },
 ]
 
